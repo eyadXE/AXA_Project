@@ -5,5 +5,18 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "pgvector>=0.5.1",
+    "psycopg2-binary>=2.9.13",
+    "pydantic>=2.14.4",
+    "python-dotenv>=1.2.4",
     "sentence-transformers>=6.2.0",
 ]
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+]
+
